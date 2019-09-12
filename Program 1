@@ -1,0 +1,27 @@
+         /*
+		 Project Name: Hello there
+		 Author: Shannon Mong
+		 GitHub: Feldariia
+		 Description: Program 1 for Programming.
+		 Last Modified: 10Sep2019
+		 Version: 1.0
+		 */
+
+public class ick {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int age, myClassYear, favoriteNumber;
+age = 18;
+myClassYear = 2023;
+favoriteNumber = 13;
+
+//Age, Number, and graduation year
+System.out.println("Hello, You are " + age + " years old, your favorite number is " + favoriteNumber + " and you are graduating in " + myClassYear);
+
+//Welcoming Class of 2023 to SHU
+System.out.print("\tWelcome\n\tClass\n\tOf\n\t" + myClassYear + "!!" );
+
+	}
+
+}
