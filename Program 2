@@ -1,0 +1,91 @@
+         /*
+		 Project Name: Project 2
+		 Author: Shannon Mong
+		 GitHub: Feldariia
+		 Description: Program 2 for Programming class
+		 Last Modified: 17Sep2019
+		 Version: 1.0
+		 */
+
+import java.util.Scanner;
+
+public class ohno {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Start keyboard scanner
+		Scanner keyboard = new Scanner(System.in);
+		
+		//Declare Variables
+		int choice;
+		double num1;
+		double num2;
+		double num3;
+		
+		//Ask for three numbers
+		System.out.println("Please enter the first number");
+        num1 = keyboard.nextInt();
+
+        System.out.println("Please enter the second number");
+        num2 = keyboard.nextInt();
+        
+        System.out.println("Please enter the third number");
+        num3 = keyboard.nextInt();
+        
+        
+		//Display menu and get user input
+		System.out.println("\tMain Menu");
+		System.out.println("\t================\n");
+		System.out.println("\tAdd (1) ");
+		System.out.println("\tSubtract (2)");
+		System.out.println("\tDivide (3) ");
+		System.out.println("\tMultiply (4) ");
+		System.out.println("\tExit (5) ");
+		choice = keyboard.nextInt();
+
+		//Note, if you wanted to input a char.
+		//char choice;
+		//choice = keyboard.next().charAt(0);
+	
+		//Output content based upon user input
+//		int choice;
+		switch (choice) {
+
+		//Cases of operation
+		case 1:
+			System.out.println("Your answer is " + (num1 + num2));
+			break;
+		case 2:
+			System.out.println("Your answer is " + (num1 - num2));
+			break;
+		case 3:
+			System.out.println("Your answer is " + (num1 / num2));
+			break;
+		case 4:
+			System.out.println("Your answer is " + (num1 * num2));
+			break;
+		case 5:
+			System.out.println("Thank you for using this S W E E T Java Calculator :) ");
+			break;
+		default:
+			System.out.println("You have entered either a wrong operation or number");
+	}
+	//If/Else statement for num1 and num3.
+		
+	if (num1 > num3)
+	{
+		System.out.println( num1 + " is greater than " + num3);
+	}
+	else
+	{
+		System.out.println( num1 + " is not greater than " + num3);
+	}
+	
+	//Close keyboard
+	keyboard.close();
+	
+	}
+}
+//NOTE: I was trying to make it so the sum/diff/etc of the two numbers would be compared to the third number, but I did not know how.
+//Sorry! I tried :( please spare me :(((((((
