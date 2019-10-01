@@ -1,0 +1,47 @@
+// Project:		Program 3
+// Author:		Shannon Mong
+// GitHub:		feldariia
+// Description:	Program 3 for Programming class
+// Date:		1 October, 2019
+// Version:		1.0
+
+// Import Required Code 
+import java.util.Scanner;
+
+public class sad {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Start keyboard scanner
+		Scanner keyboard = new Scanner(System.in);
+
+		// Declare variables and prompt user for input
+		int i;
+
+		// Determine if the input is between 0 to 100
+
+		do {
+			System.out.print("Pick a number between 0 to 100 ");
+			i = keyboard.nextInt();
+
+		} while (i <= 0 && i <= 100);
+		System.out.println("Thank you for your input");
+
+		// Use a for loop to count down from 100 depending on the picked number
+
+		for (int j = i; j >= 0; j--) 
+		{
+			System.out.println("Your number is " + j + ". Only " + (i - j) + " More numbers until you reach 0! ");
+		}
+		
+		//If value is 0
+		for (int j = i; j == 0;);
+				System.out.println("Good job! You counted down to zero! Now why don't you go back to your standard 4th grade math class so you can do it yourself instead of using a crappy countdown made by a stressed University Student?");
+		
+		// Close Keyboard
+		keyboard.close();
+
+	}
+
+}
