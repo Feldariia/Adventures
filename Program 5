@@ -1,0 +1,101 @@
+// Project:		Program 5
+// Author:		Shannon Mong
+// GitHub:		Feldariia
+// Description:	Program 5 for Class
+// Date:		18Oct19
+// Version:		1.0
+
+// Import Required Code (import code for keyboard)
+import java.util.Scanner;
+
+public class Program5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// Start keyboard 
+		Scanner keyboard = new Scanner(System.in);
+		
+		//Declare Variables
+				int choice;
+				double num1;
+				double num2;
+				double result = 0;
+				
+		//Ask for two number input
+		System.out.println("Please enter your first number");
+		num1 = keyboard.nextInt();
+
+		System.out.println("Please enter your second number");
+		num2 = keyboard.nextInt();
+		
+		//Display main menu
+		System.out.println("Main Menu");
+		System.out.println("=========");
+		System.out.println("1.) Addition");
+		System.out.println("2.) Sub");
+		System.out.println("3.) Multiply");
+		System.out.println("4.) Divide");
+		System.out.println("5.) Exit");
+		System.out.println("Please enter a choice: ");
+		
+		int menuChoice = keyboard.nextInt();
+		
+		//Switch cases for addition, subtraction, multiplication, and division
+		
+		switch(menuChoice)
+		{
+			case 1:
+				result = addition(num1, num2);
+				break;
+			case 2:
+				result = subtraction(num1, num2);
+				break;
+			case 3:
+				result = multiply(num1, num2);
+				break;
+			case 4:
+				result = divide(num1, num2);
+				break;
+			default:
+				System.out.println("Thank you for using this calculator.  Good bye!");
+		}
+		
+		// Output result
+		System.out.println("Your result is: " + result);
+		
+		// Close keyboard
+		keyboard.close();
+		
+	}
+	
+	
+	
+	// Pass in methods
+	public static double addition(double num1,double num2)
+	{
+		double res = num1 + num2;
+		return res;
+	}
+	
+	
+
+	public static double subtraction(double num1, double num2)
+	{
+		double res = num1 - num2;
+		return res;
+	}
+	
+	
+	public static double multiply(double num1, double num2)
+	{
+		double res = num1 * num2;
+		return res;
+	}
+
+	public static double divide(double num1, double num2)
+	{
+		double res = num1 / num2;
+		return res;
+	}
+}
