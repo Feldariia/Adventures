@@ -1,0 +1,115 @@
+// Project:		Program 7
+// Author:		Shannon Mong
+// GitHub:		Feldariia
+// Description:	Program 7 for Class
+// Date:		5Nov19
+// Version:		1.0
+
+//Import Randomizer and Scanner
+import java.util.Scanner;
+import java.util.Random;
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Declare variables
+		int teamOne=0;
+		int rounds = 0;
+		int teamTwoTotal=0;
+		int teamTwo=0;
+		int teamOneTotal=0;
+
+		//Start keyboard and randomizer
+		Scanner keyboard = new Scanner(System.in);
+		Random rnd = new Random();
+
+		int score= rnd.nextInt(100);
+
+
+		System.out.println("Welcome to SHU sports, where students try to register for their classes and fail miserably!\n");
+
+		//Ask for user input
+		System.out.println("How many game rounds will you play today?\n");
+		rounds = keyboard.nextInt();
+
+		//Declare array
+		int [][]game= new int [rounds][2];
+
+		//Initialize first loop for score array
+		for (int i = 0; i<game.length;i++) {
+
+			for (int ii = 0;ii<game[0].length;ii++) {
+
+				game[i][ii]=score;
+
+				//Limit the randomizer to 10
+				score=rnd.nextInt(10)+1;
+
+			}
+
+		}
+
+		//Initialize second loop for score array
+		for (int i=0;i<game.length;i++) {
+
+			for(int ii = 0;ii<game[0].length;ii++) {
+
+				if (ii==0) {
+
+					teamOneTotal+=game[i][ii];
+
+					teamOne=game[i][ii];
+
+					teamTwo=game[i][1];
+
+				}
+
+				if (ii==1) {
+
+					teamTwoTotal+=game[i][ii];
+
+					teamTwo=game[i][ii];
+
+					teamOne=game[i][0];
+
+				}
+
+			}
+			//Output format of randomized rounds
+			System.out.println("\n" + "Team One: \t" + teamOne+ "\tAway: " + teamTwo + "\n");
+
+		}
+
+		System.out.println("\n================================\n"
+				+ "\n\tFinal Score\n");
+
+		//Output total for Team one and Team two 
+		System.out.println("Team One : " + teamOneTotal + "\n" + "Team Two: " + teamTwoTotal + "\n");
+
+		//Determine which team had the most points
+		if(teamOneTotal>teamTwoTotal) {
+
+			System.out.println("Team One has won! Good Work!");
+
+		}
+
+		else if (teamTwoTotal>teamOneTotal) {
+
+			System.out.println("\tTeam Two has won! Good Work!");
+
+		}
+
+		//I think I can do this for a tie, I do not really know though.
+		else {
+
+			System.out.println("\tBoth teams tied! Please try again! D:");
+
+		}
+
+		// Close the keyboard
+		keyboard.close();
+		System.out.println("Thank you for playing SHU Sports! Hopefully you didn't cry as much!");
+	}
+}
